@@ -36,8 +36,8 @@ http.createServer(function(request, response) {
      var numOutput = new Number(Math.random() * numInput).toFixed(0);
      
      // Write the random number to response
-     response.write(numOutput);
-     
+     response.write(numOutput + '\n');
+     console.log("got " + numOutput + '\n'); 
      // Node requires us to explicitly end this connection.  This is because
      // Node allows you to keep a connection open and pass data back and forth,
      // though that advanced topic isn't discussed in this article.
